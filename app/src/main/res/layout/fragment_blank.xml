@@ -10,25 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/main_text_about"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="About" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="8dp"
-                android:background="#aaa" />
-
-
-        </LinearLayout>
+            android:layout_margin="8dp"
+            android:text="@string/about_text" />
 
     </android.support.v7.widget.CardView>
 

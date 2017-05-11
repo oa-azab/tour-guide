@@ -3,4 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_text"><![CDATA[
+<H1>6th of October</H1>
+<H6>City in Egypt</H6>
+6th of October is a city in Giza Governorate, a satellite town and part of the urban area of Cairo, Egypt, 32 km outside the city. It has a population ranging between some 185,000 in the city to an estimated 500,000 inhabitants in the wider area.<br/>
+<b>Area:</b> 400 km²<br/>
+<b>Weather:</b> 19°C, Wind N at 21 km/h, 82% Humidity<br/>
+<b>Local time:</b> Friday 1:08 AM<br/>
+<b>Governorate:</b> Giza<br/>
+]]>
+    </string>
 </resources>
