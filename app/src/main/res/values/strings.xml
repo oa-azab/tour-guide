@@ -13,4 +13,17 @@
 <b>Governorate:</b> Giza<br/>
 ]]>
     </string>
+
+    <!-- Restaurants Strings -->
+
+    <!-- Rosto -->
+    <string name="rosto_name">Rosto</string>
+    <string name="rosto_description">Arabian restaurant famous for shawerma and chicken</string>
+    <string name="rosto_location_url">https://www.google.com.eg/maps/place/Rosto/@29.974199,30.944658,19.25z/data=!4m12!1m6!3m5!1s0x145856f77c5e03f9:0x72601f8d8eeaebbc!2sRosto!8m2!3d29.974414!4d30.9450102!3m4!1s0x145856f77c5e03f9:0x72601f8d8eeaebbc!8m2!3d29.974414!4d30.9450102</string>
+
+    <!-- Kababji -->
+    <string name="kababji_name">Kababji</string>
+    <string name="kababji_description">Arabian restaurant famous for grilled food</string>
+    <string name="kababji_location_url">https://www.google.com.eg/maps/place/Kababji/@29.9742693,30.9435313,21z/data=!4m5!3m4!1s0x0:0x249ff601424cb22!8m2!3d29.9743612!4d30.9437234</string>
+
 </resources>

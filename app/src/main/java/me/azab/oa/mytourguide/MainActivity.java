@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
         BlankFragment mFragment = new BlankFragment();
-        mFragmentTransaction.add(R.id.main_container,mFragment);
+        mFragmentTransaction.add(R.id.main_container,new PlacesFragment());
         mFragmentTransaction.commit();
     }
 }
