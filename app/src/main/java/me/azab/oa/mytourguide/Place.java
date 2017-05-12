@@ -25,31 +25,15 @@ public class Place {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getImage() {
         return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
     }
 
     public String getDescirption() {
         return descirption;
     }
 
-    public void setDescirption(String descirption) {
-        this.descirption = descirption;
-    }
-
     public String getLocationUrl() {
         return locationUrl;
-    }
-
-    public void setLocationUrl(String locationUrl) {
-        this.locationUrl = locationUrl;
     }
 }

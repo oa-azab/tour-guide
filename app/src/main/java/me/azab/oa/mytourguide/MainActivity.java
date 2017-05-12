@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         //Add Fragments Here
-        adapter.addFrag(new AboutFragment(),"About");
-        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.MALLS_INDEX),"Malls");
-        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.RESTAURANTS_INDEX),"Restaurants");
-        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.CINEMA_INDEX),"Cinemas");
+        adapter.addFrag(new AboutFragment(),getString(R.string.tab_about));
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.MALLS_INDEX),getString(R.string.tab_malls));
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.RESTAURANTS_INDEX),getString(R.string.tab_restaurants));
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.CINEMA_INDEX),getString(R.string.tab_cinemas));
 
         viewPager.setAdapter(adapter);
     }
