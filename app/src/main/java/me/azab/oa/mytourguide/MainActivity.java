@@ -1,16 +1,16 @@
 package me.azab.oa.mytourguide;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.FrameLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout mFrameLayout;
-    FragmentManager mFragmentManager;
-    FragmentTransaction mFragmentTransaction;
+    Toolbar mToolbar;
+    ViewPager mViewPager;
+    TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find UI
-        mFrameLayout = (FrameLayout) findViewById(R.id.main_container);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        mTabLayout = (TabLayout) findViewById(R.id.tabs);
 
-        // Add Fragment to framelayout
-        mFragmentManager = getSupportFragmentManager();
-        mFragmentTransaction = mFragmentManager.beginTransaction();
-        BlankFragment mFragment = new BlankFragment();
-        mFragmentTransaction.add(R.id.main_container,new PlacesFragment());
-        mFragmentTransaction.commit();
+        // Setup Toolbar
+        setSupportActionBar(mToolbar);
+
+        // Setup ViewPager
+        setupViewPager(mViewPager);
+
+        // Setup Tab Layout
+        mTabLayout.setupWithViewPager(mViewPager);
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        //Add Fragments Here
+        adapter.addFrag(new AboutFragment(),"About");
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.MALLS_INDEX),"Malls");
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.RESTAURANTS_INDEX),"Restaurants");
+        adapter.addFrag(new PlacesFragment().newInstance(PlacesFragment.CINEMA_INDEX),"Cinemas");
+
+        viewPager.setAdapter(adapter);
     }
 }

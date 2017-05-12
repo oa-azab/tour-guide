@@ -14,6 +14,18 @@
 ]]>
     </string>
 
+    <!-- Malls Strings -->
+
+    <!-- Mall Of Arabia -->
+    <string name="moa_name">Mall Of Arabia</string>
+    <string name="moa_description">Shopping mall</string>
+    <string name="moa_location_url">https://www.google.com.eg/maps/place/Mall+Of+Arabia/@30.0034556,30.9674042,15.5z/data=!4m5!3m4!1s0x0:0xf8562fae56bf860f!8m2!3d30.0073947!4d30.9740102?hl=en</string>
+
+    <!-- Mall Of Egypt -->
+    <string name="moe_name">Mall Of Egypt</string>
+    <string name="moe_description">Shopping mall</string>
+    <string name="moe_location_url">https://www.google.com.eg/maps/place/Mall+Of+Egypt/@29.9724362,31.0149729,17z/data=!3m1!4b1!4m5!3m4!1s0x145850e69d5df119:0x5e57249a43705ca0!8m2!3d29.9724362!4d31.0171616?hl=en</string>
+
     <!-- Restaurants Strings -->
 
     <!-- Rosto -->
@@ -25,5 +37,12 @@
     <string name="kababji_name">Kababji</string>
     <string name="kababji_description">Arabian restaurant famous for grilled food</string>
     <string name="kababji_location_url">https://www.google.com.eg/maps/place/Kababji/@29.9742693,30.9435313,21z/data=!4m5!3m4!1s0x0:0x249ff601424cb22!8m2!3d29.9743612!4d30.9437234</string>
+
+    <!-- Cinema Strings -->
+
+    <!-- Galaxy Cineplex -->
+    <string name="galaxy_name">Galaxy Cineplex</string>
+    <string name="galaxy_description">Cinema Halls</string>
+    <string name="galaxy_location_url">https://www.google.com.eg/maps/place/Galaxy+Cineplex+-+Mall+Of+Arabia/@30.0018206,30.9688073,16.04z/data=!4m8!1m2!2m1!1sCinema!3m4!1s0x145857443825ff5f:0x21228afd96100da2!8m2!3d30.0059964!4d30.9706682?hl=en</string>
 
 </resources>

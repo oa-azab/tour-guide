@@ -13,17 +13,17 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BlankFragment extends Fragment {
+public class AboutFragment extends Fragment {
 
     TextView mTextView;
 
-    public BlankFragment() {
+    public AboutFragment() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_about, container, false);
         mTextView = (TextView) rootView.findViewById(R.id.main_text_about);
         mTextView.setText(Html.fromHtml(getString(R.string.about_text)));
         return rootView;

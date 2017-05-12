@@ -21,11 +21,23 @@ public class PlacesFragment extends Fragment {
 
     RecyclerView mRecyclerView;
     PlacesAdapter mPlacesAdapter;
+    List<Place> mList = new ArrayList<>();
+
+    public static final int MALLS_INDEX = 1;
+    public static final int RESTAURANTS_INDEX = 2;
+    public static final int CINEMA_INDEX = 3;
 
     public PlacesFragment() {
         // Required empty public constructor
     }
 
+    public static PlacesFragment newInstance(int index) {
+        PlacesFragment fragment = new PlacesFragment();
+        Bundle args = new Bundle();
+        args.putInt("index", index);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,13 +51,31 @@ public class PlacesFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        List<Place> list = new ArrayList<>();
-        list.add(new Place(getString(R.string.rosto_name),R.drawable.rostoimage,getString(R.string.rosto_description),getString(R.string.rosto_location_url)));
-        list.add(new Place(getString(R.string.kababji_name),R.drawable.kababjiimage,getString(R.string.kababji_description),getString(R.string.kababji_location_url)));
 
-        mPlacesAdapter = new PlacesAdapter(getContext(),list);
+        Bundle args = getArguments();
+        int index = args.getInt("index", 1);
+
+        mPlacesAdapter = new PlacesAdapter(getContext(), getList(index));
         mRecyclerView.setAdapter(mPlacesAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setHasFixedSize(true);
+    }
+
+    private List<Place> getList(int index) {
+        List<Place> list = new ArrayList<>();
+        switch (index){
+            case MALLS_INDEX:
+                list.add(new Place(getString(R.string.moa_name), R.drawable.moaimage, getString(R.string.moa_description), getString(R.string.moa_location_url)));
+                list.add(new Place(getString(R.string.moe_name), R.drawable.moeiamge, getString(R.string.moe_description), getString(R.string.moe_location_url)));
+                break;
+            case RESTAURANTS_INDEX:
+                list.add(new Place(getString(R.string.rosto_name), R.drawable.rostoiamge, getString(R.string.rosto_description), getString(R.string.rosto_location_url)));
+                list.add(new Place(getString(R.string.kababji_name), R.drawable.kababjiimage, getString(R.string.kababji_description), getString(R.string.kababji_location_url)));
+                break;
+            case CINEMA_INDEX:
+                list.add(new Place(getString(R.string.galaxy_name), R.drawable.galaxyimage, getString(R.string.galaxy_description), getString(R.string.galaxy_location_url)));
+                break;
+        }
+        return list;
     }
 }
